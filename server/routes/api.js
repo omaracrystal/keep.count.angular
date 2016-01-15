@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var Beer = require('../models/beer.js');
+var Counter = require('../models/counter.js');
 
-// get all beers
-router.get('/beers', function(req, res, next) {
-  Beer.find(function(err, data){
+// get all counters
+router.get('/counters', function(req, res, next) {
+  Counter.find(function(err, data){
     if(err){
       res.json({'message': err});
     } else {
@@ -14,9 +14,9 @@ router.get('/beers', function(req, res, next) {
 });
 
 
-// get a beer
-router.get('/beer/:id', function(req, res, next) {
-  Beer.findById(req.params.id, function(err, data){
+// get a counter
+router.get('/counter/:id', function(req, res, next) {
+  Counter.findById(req.params.id, function(err, data){
     if(err){
       res.json({'message': err});
     } else {
@@ -25,14 +25,13 @@ router.get('/beer/:id', function(req, res, next) {
   });
 });
 
-// post a beer
-router.post('/beers', function(req, res, next) {
-  newBeer = new Beer({
+// post a counter
+router.post('/counters', function(req, res, next) {
+  newCounter = new Counter({
     name: req.body.name,
-    type: req.body.type,
-    abv: parseFloat(req.body.abv)
+    count: parseFloat(req.body.count)
   });
-  newBeer.save(function(err, data){
+  newCounter.save(function(err, data){
     if(err){
       res.json({'message': err});
     } else {
@@ -41,14 +40,13 @@ router.post('/beers', function(req, res, next) {
   });
 });
 
-// put a beer
-router.put('/beer/:id', function(req, res, next) {
+// put a counter
+router.put('/counter/:id', function(req, res, next) {
   var update = {
     name: req.body.name,
-    type: req.body.type,
-    abv: parseFloat(req.body.abv)
+    count: parseFloat(req.body.count)
   };
-  Beer.findByIdAndUpdate(req.params.id, update, function(err, data){
+  Counter.findByIdAndUpdate(req.params.id, update, function(err, data){
     if(err){
       res.json({'message': err});
     } else {
@@ -57,9 +55,9 @@ router.put('/beer/:id', function(req, res, next) {
   });
 });
 
-// delete a beer
-router.delete('/beer/:id', function(req, res, next) {
-  Beer.findByIdAndRemove(req.params.id, function(err, data){
+// delete a counter
+router.delete('/counter/:id', function(req, res, next) {
+  Counter.findByIdAndRemove(req.params.id, function(err, data){
     if(err){
       res.json({'message': err});
     } else {

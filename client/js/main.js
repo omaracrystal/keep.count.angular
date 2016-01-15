@@ -1,5 +1,5 @@
 $(document).on('ready', function() {
-  getBeers();
+  getCounters();
 });
 
 // handle form submission
@@ -10,35 +10,33 @@ $('form').on('submit', function(e){
   // create payload on form submit
   var payload = {
     name: $('#name').val(),
-    type:$('#type').val(),
-    abv: $('#abv').val()
+    count: $('#count').val(),
   };
   // send post request to server
-  $.post('/api/v1/beers', payload, function(data) {
+  $.post('/api/v1/counters', payload, function(data) {
     // append 'Added' to DOM
     $('.message-section').show();
-    $('#message').html('Added a new beer. Thanks!');
+    $('#message').html('Added a new counter. Thanks!');
     // get all penguins
-    getBeers();
+    getCounters();
   });
 });
 
-// get all beers
-function getBeers() {
-  // clear all beers
-  $('#all-beers').html('');
+// get all counters
+function getCounters() {
+  // clear all counters
+  $('#all-counters').html('');
   // send get request to server
-  $.get('/api/v1/beers', function(data) {
+  $.get('/api/v1/counters', function(data) {
     if(data.length === 0) {
-      $('.beer-section h2').html('No beers! Add a beer above.');
+      $('.counter-section h2').html('No counters! Add a counter above.');
     } else {
-      $('.beer-section h2').html('All beers');
+      $('.counter-section h2').html('All counters');
       // loop through array of objects, appending each to the DOM
       for (var i = 0; i < data.length; i++) {
-        $('#all-beers').append('<tr>'+
+        $('#all-counters').append('<tr>'+
           '<td>'+data[i].name+'</td>'+
-          '<td>'+data[i].type+'</td>'+
-          '<td>'+data[i].abv+'</td>'+
+          '<td>'+data[i].count+'</td>'+
           '<tr>'
         );
       }
