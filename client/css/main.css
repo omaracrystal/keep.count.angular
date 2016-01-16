@@ -8,9 +8,6 @@ a {
   color: #00B7FF;
 }
 
-table {
-}
-
 h2{
   text-align: center;
 }
@@ -54,6 +51,16 @@ h2{
   text-decoration: none;
 }
 
+.add-counter {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.all-counters {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
 .square {
   width: 200px;
   height: 200px;
@@ -91,7 +98,7 @@ h2{
   text-align: center;
 }
 
-#header {
+.header {
   width: 100%;
   display: flex;
   align-items: center;
