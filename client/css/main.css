@@ -1,6 +1,7 @@
 body {
   padding: 30px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #78cf97;
 }
 
 a {
@@ -17,6 +18,14 @@ h2{
 #input {
   text-align: center;
   border-radius: 50px;
+}
+
+#add {
+  border-radius: 25px;
+}
+
+#update {
+  border-radius: 25px;
 }
 
 .btn {
@@ -70,6 +79,7 @@ h2{
 }
 
 .glyphicon {
+  margin: 0 auto;
   font-size: 15px;
   border-radius: 50%;
   padding: 2px 3px 2px 3px;
@@ -81,7 +91,19 @@ h2{
   text-align: center;
 }
 
+#header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
   width: 150px;
   height: 150px;
   text-align: center;
