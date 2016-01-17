@@ -25,6 +25,7 @@ h2{
   border-radius: 25px;
 }
 
+
 .btn {
   border-width: 0px;
   font-size: 15px;
@@ -59,6 +60,15 @@ h2{
 .all-counters {
   margin: 0 auto;
   max-width: 800px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col-md-3 {
+  width: 250px;
 }
 
 .square {

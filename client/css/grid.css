@@ -1,0 +1,81 @@
+/* -- DEFAULTS -- */
+
+div, ul, li{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* -- FLUID GRID STYLES -- */
+
+#Grid{
+  margin-bottom: 40px;
+  text-align: justify;
+  font-size: 0.1px;
+}
+
+#Grid li{
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  width: 33%;
+  padding-top: 0%; /* Used instead of height to give elements fluid, width-based height */
+  margin-bottom: 2.5%;
+}
+
+#Grid:after{
+  content: '';
+  display: inline-block;
+  width: 100%;
+  border-top: 1px solid #fff; /* Border added to make element visible for demonstration purposes */
+}
+
+#Grid .placeholder{
+  padding: 0;
+  border-top: 10px solid #922d8d; /* Border added to make element visible for demonstration purposes */
+}
+
+/* -- MEDIA QUERIES DEFINING RESPONSIVE LAYOUTS -- */
+
+/* 4 COL */
+
+@media (min-width: 1000px){
+  #Grid li{
+    width: 25%;
+    padding-top: 0%;
+    margin-bottom: 3%;
+  }
+}
+
+
+/* 3 COL */
+
+@media (max-width: 800px){
+  #Grid li{
+    width: 31%;
+    padding-top: 0%;
+    margin-bottom: 3%;
+  }
+}
+
+/* 2 COL */
+
+@media (max-width: 775px){
+  #Grid li{
+    width: 48%;
+    padding-top: 0%;
+    margin-bottom: 3%;
+  }
+}
+
+/* SINGLE COL */
+
+@media (max-width: 520px){
+  #Grid li{
+    width: 100%;
+    padding-top: 0%;
+    margin-bottom: 3%;
+  }
+}
