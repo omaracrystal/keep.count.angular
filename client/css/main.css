@@ -8,8 +8,16 @@ a {
   color: #00B7FF;
 }
 
-h2{
+h1 {
   text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+#total {
+  font-size: 6em;
 }
 
 #input {
@@ -19,6 +27,8 @@ h2{
 
 #add {
   border-radius: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #update {

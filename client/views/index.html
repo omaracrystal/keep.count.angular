@@ -9,15 +9,37 @@
 
 </head>
 
-<body ng-controller="counter-controller">
-<!--MODAL-->
-<h1>TOTAL COUNT</h1>
-<h1 ng-forEach="counter in counters">{{total()}}</h1>
+<body>
 
-<!--END MODAL-->
+<div ng-controller="counter-controller">
+<div class="container">
+  <h2>TOTAL COUNT</h2>
+  <h1 id="total" ng-forEach="counter in counters">{{total()}}</h1>
 
-  <div class="container">
+  <!--MODAL-->
 
+  <div>
+<modal-dialog show='modalShown' width='70%' height='70%'>
+    <div class="add-counter">
+      <h1 class="text-center" ng-hide="edit">Add a New Counter</h1>
+      <h1 class="text-center" ng-show="edit">Edit a Counter</h1>
+
+      <form>
+        <div class="form-group">
+          <input id="input" type="text" class="form-control" ng-model="counter.name" placeholder="Enter the counter name" required>
+        </div>
+        <div class="form-group">
+          <input id="input" type="text" class="form-control" ng-model="counter.count" placeholder="Enter starting count" required>
+        </div>
+        <button ng-hide="edit" ng-click="postCounter()" id="add" class="btn btn-primary btn-block">Add</button>
+        <button ng-show="edit" ng-click="updateCounter()" id="update" class="btn btn-primary btn-block">Update</button>
+      </form>
+    </div>
+  </modal-dialog>
+  <button class="btn btn-primary btn-block" id="add" ng-click='toggleModal()'>Add Counter!</button>
+</div>
+
+<!--
     <div class="add-counter">
       <h1 class="text-center" ng-hide="edit">KEEP COUNT!</h1>
       <h1 class="text-center" ng-show="edit">Edit a Counter</h1>
@@ -32,7 +54,10 @@
         <button ng-hide="edit" ng-click="postCounter()" id="add" class="btn btn-primary btn-block">Add Counter!</button>
         <button ng-show="edit" ng-click="updateCounter()" id="update" class="btn btn-primary btn-block">Update Counter</button>
       </form>
-    </div>
+</div> -->
+
+
+<!--END MODAL-->
 
     <br><hr>
 
@@ -41,8 +66,7 @@
     </div>
 
     <div class="all-counters">
-      <h2>All Counters</h2>
-        <input id="input" type="search" ng-model="search" class="form-control" placeholder="search for counters by name" required>
+      <input id="input" type="search" ng-model="search" class="form-control" placeholder="search for counters by name" required>
     </div>
 
      <hr>
@@ -71,10 +95,12 @@
       <h1 ng-if="results.length == 0">No results found...</h1>
 
     </ul>
+</div>
 
-  </div>
+</div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="../js/app.js" type="text/javascript"></script>
   <script src="../js/controllers.js" type="text/javascript"></script>
   <script src="../js/directives.js" type="text/javascript"></script>

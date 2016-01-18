@@ -6,6 +6,11 @@ app.controller("counter-controller", ["$scope", "httpFactory", "$timeout", funct
   $scope.counter = {};
   $scope.counters = [];
 
+  $scope.modalShown = false;
+  $scope.toggleModal = function() {
+    $scope.modalShown = !$scope.modalShown;
+  };
+
   var counterUrl = "";
   var countersUrl = "/api/v1/counters"
 
@@ -70,3 +75,10 @@ app.controller("counter-controller", ["$scope", "httpFactory", "$timeout", funct
   }
 
 }]);
+
+// app.controller('modal', function($scope) {
+//   $scope.modalShown = false;
+//   $scope.toggleModal = function() {
+//     $scope.modalShown = !$scope.modalShown;
+//   };
+// });
