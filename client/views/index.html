@@ -42,7 +42,7 @@
 
     <div class="all-counters">
       <h2>All Counters</h2>
-        <input id="input" type="text" class="form-control" placeholder="search for counters by name" required>
+        <input id="input" type="search" ng-model="search" class="form-control" placeholder="search for counters by name" required>
     </div>
 
      <hr>
@@ -50,7 +50,7 @@
   <!-- FLUID GRID -->
 
     <ul id="Grid">
-      <li ng-repeat="counter in counters">
+      <li ng-repeat="counter in counters | filter:search as results">
         <div class="square">
           <div class="header">
             <button id="edit" class="btn btn-primary" ng-click="editCounter(counter._id)"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
@@ -67,6 +67,9 @@
           </div>
         </div>
       </li>
+
+      <h1 ng-if="results.length == 0">No results found...</h1>
+
     </ul>
 
   </div>
