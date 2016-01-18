@@ -1,9 +1,10 @@
-app.controller("counterController", ["$scope", "httpFactory", "$timeout", function($scope, httpFactory, $timeout){
+app.controller("counter-controller", ["$scope", "httpFactory", "$timeout", function($scope, httpFactory, $timeout){
 
   $scope.messageSection = false;
   $scope.edit = false;
   $scope.message = "";
   $scope.counter = {};
+  $scope.counters = [];
 
   var counterUrl = "";
   var countersUrl = "/api/v1/counters"
@@ -47,13 +48,21 @@ app.controller("counterController", ["$scope", "httpFactory", "$timeout", functi
     $scope.edit = false;
     $scope.counter = {};
     showMessage("Counter Successfully Updated!");
-  }
+  };
 
   $scope.deleteCounter = function(id) {
     counterUrl = "/api/v1/counter/" + id;
     httpFactory.delete(counterUrl);
     showMessage("Counter Successfully Deleted!");
   }
+
+  $scope.total = function() {
+    var total = 0;
+    for(var i=0; i < $scope.counters.length; i++) {
+      total += $scope.counters[i].count;
+    }
+    return total;
+  };
 
 
 }]);

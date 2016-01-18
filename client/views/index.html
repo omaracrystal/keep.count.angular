@@ -9,9 +9,10 @@
 
 </head>
 
-<body ng-controller="counterController">
+<body ng-controller="counter-controller">
 <!--MODAL-->
-
+<h1>TOTAL COUNT</h1>
+<h1 ng-forEach="counter in counters">{{total()}}</h1>
 
 <!--END MODAL-->
 
