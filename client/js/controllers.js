@@ -32,6 +32,10 @@ app.controller("counter-controller", ["$scope", "httpFactory", "$timeout", funct
 
   getCounters(countersUrl);
 
+  $scope.clearForm = function() {
+    $scope.form.reset();
+  }
+
   $scope.postCounter = function(){
     var payload = $scope.counter;
     httpFactory.post(countersUrl, payload);
@@ -75,10 +79,3 @@ app.controller("counter-controller", ["$scope", "httpFactory", "$timeout", funct
   }
 
 }]);
-
-// app.controller('modal', function($scope) {
-//   $scope.modalShown = false;
-//   $scope.toggleModal = function() {
-//     $scope.modalShown = !$scope.modalShown;
-//   };
-// });
