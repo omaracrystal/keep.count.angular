@@ -46,23 +46,6 @@
     </div>
 
      <hr>
-<!--
-  <div ng-repeat="counter in counters track by $index" ng-if="$index%4==0">
-    <div class="row">
-      <div class="col-md-3">
-        {{counters[$index].name}}
-      </div>
-      <div class="col-md-3">
-        {{counters[$index+1].name}}
-      </div>
-      <div class="col-md-3">
-        {{counters[$index+2].name}}
-      </div>
-      <div class="col-md-3">
-        {{counters[$index+3].name}}
-      </div>
-    </div>
-  </div> -->
 
   <!-- FLUID GRID -->
 
@@ -76,11 +59,11 @@
           </div>
 
           <div class="count">
-            <button class="btn up"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></button>
+            <button class="btn up" ng-click="counter.count = counter.count + 1"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></button>
             <br>
             <span>{{counter.count}}</span>
             <br>
-            <button class="btn down"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button>
+            <button class="btn down" ng-click="counter.count = counter.count - 1"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button>
           </div>
         </div>
       </li>

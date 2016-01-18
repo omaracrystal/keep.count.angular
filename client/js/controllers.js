@@ -64,5 +64,9 @@ app.controller("counter-controller", ["$scope", "httpFactory", "$timeout", funct
     return total;
   };
 
+  function increment(num) {
+    var newCount = $scope.counter.count + num;
+    console.log("hello");
+  }
 
 }]);
