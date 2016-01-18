@@ -10,12 +10,17 @@
 </head>
 
 <body ng-controller="counterController">
+<!--MODAL-->
+
+
+<!--END MODAL-->
 
   <div class="container">
 
     <div class="add-counter">
       <h1 class="text-center" ng-hide="edit">KEEP COUNT!</h1>
       <h1 class="text-center" ng-show="edit">Edit a Counter</h1>
+
       <form>
         <div class="form-group">
           <input id="input" type="text" class="form-control" ng-model="counter.name" placeholder="Enter the counter name" required>

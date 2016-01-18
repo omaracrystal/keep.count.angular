@@ -55,4 +55,5 @@ app.controller("counterController", ["$scope", "httpFactory", "$timeout", functi
     showMessage("Counter Successfully Deleted!");
   }
 
+
 }]);
