@@ -22,10 +22,13 @@ h2 {
 
 #input {
   text-align: center;
-  border-radius: 50px;
+  border-radius: 25px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 #add {
+  margin-top: 20px;
   border-radius: 25px;
   padding-left: 20px;
   padding-right: 20px;
@@ -34,7 +37,6 @@ h2 {
 #update {
   border-radius: 25px;
 }
-
 
 .btn {
   border-width: 0px;
@@ -84,6 +86,7 @@ h2 {
 .square {
   width: 200px;
   height: 200px;
+  margin: 0 auto;
   text-align: center;
   border-width: 0px;
   background: #ffffff;
