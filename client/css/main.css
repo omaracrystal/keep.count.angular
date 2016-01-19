@@ -16,6 +16,19 @@ h2 {
   text-align: center;
 }
 
+.alert {
+  position: fixed;
+  top: 100px;
+  width: 100%;
+  text-align: center;
+  /* Center the dialog */
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+}
+
 #total {
   font-size: 6em;
 }
@@ -35,7 +48,10 @@ h2 {
 }
 
 #update {
+  margin-top: 20px;
   border-radius: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .btn {

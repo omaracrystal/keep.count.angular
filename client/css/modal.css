@@ -18,7 +18,7 @@
 .ng-modal-dialog {
   /* A centered div above the overlay with a box shadow. */
   z-index:10000;
-  position: absolute;
+  position: fixed;
   width: 50%; /* Default */
   display: flex;
   justify-content: center;
@@ -29,7 +29,7 @@
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
-  background-color: #fff;
+  background-color: white;
   box-shadow: 4px 4px 80px #000;
   border-radius: 50px;
 }
