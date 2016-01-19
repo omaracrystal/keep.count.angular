@@ -11,30 +11,44 @@
 
 <body>
 
-  <nav>
-    <h2>TOTAL COUNT</h2>
-  </nav>
-
 <div ng-controller="counter-controller">
 
-<div class="container">
-    <h1 id="total" ng-forEach="counter in counters">{{total()}}</h1>
+<nav id="nav2" sticky-nav ng-forEach="counter in counters">
+
+  <div>
+    <span id="total1">TOTAL COUNT</span>
+    <br>
+    <span id="total2" class="text-shadow">{{total()}}</span>
+  </div>
+
+  <input id="input" type="search" ng-model="search" class="form-control" placeholder="search for counters by name" required>
+
+  <button id="addNav" ng-click='toggleModal(); hideEdit()'><span class="glyphicon glyphicon-plus" id="plus" aria-hidden="true"></span></button>
+
+</nav>
 
 <div ng-show="messageSection">
   <p class="alert alert-info" role="alert">{{ message }}</p>
 </div>
 
-  <!--MODAL-->
+
+<div class="container">
+    <h1>TOTAL COUNT</h1>
+    <h1 id="total" class="text-shadow" ng-forEach="counter in counters">{{total()}}</h1>
+
+  <br><hr>
+
+<!--MODAL-->
   <modal-dialog show='modalShown' width='70%' height='70%'>
     <h2 class="text-center" ng-hide="edit">Add a New Counter</h2>
-    <h1 class="text-center" ng-show="edit">Edit a Counter</h1>
+    <h2 class="text-center" ng-show="edit">Edit a Counter</h2>
 
     <div class="square" id="modalSquare">
       <div class="header">
 
         <button id="edit" class="btn btn-primary"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
 
-<!--form input for name-->
+    <!--form input for name-->
         <span>
           <div class="form-group">
             <input id="input" type="text" class="form-control" ng-model="counter.name" placeholder="new name" name="name" required>
@@ -50,7 +64,7 @@
         <button class="btn up" ng-click="counter.count = counter.count + 1"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></button>
         <br>
 
-<!--form input for number-->
+      <!--form input for number-->
           <div class="form-group">
             <input id="input" type="text" class="form-control" ng-model="counter.count" placeholder="number" name="number" required>
           </div>
@@ -67,39 +81,32 @@
 
 <!--END MODAL-->
 
-  <br><hr>
 
-  <div class="all-counters">
-    <input id="input" type="search" ng-model="search" class="form-control" placeholder="search for counters by name" required>
-  </div>
 
-  <button id="new" class="btn btn-primary btn-block" ng-click='toggleModal(); hideEdit()'>ADD A NEW COUNTER</button>
-
-  <hr>
   <!-- FLUID GRID -->
 
-    <ul id="Grid">
-      <li ng-repeat="counter in counters | filter:search as results">
-        <div class="square">
-          <div class="header">
-            <button id="edit" class="btn btn-primary" ng-click="editCounter(counter._id); toggleModal()"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
-            <span>{{counter.name}}</span>
-            <button id="delete" class="btn btn-danger" ng-click="deleteCounter(counter._id)"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
-          </div>
-
-          <div class="count">
-            <button class="btn up" ng-click="counter.count = counter.count + 1; updateCount(counter._id, counter.count)"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></button>
-            <br>
-            <span>{{counter.count}}</span>
-            <br>
-            <button class="btn down" ng-click="counter.count = counter.count - 1; updateCount(counter._id, counter.count)"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button>
-          </div>
+  <ul id="Grid">
+    <li ng-repeat="counter in counters | filter:search as results">
+      <div class="square">
+        <div class="header">
+          <button id="edit" class="btn btn-primary" ng-click="editCounter(counter._id); toggleModal()"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
+          <span>{{counter.name}}</span>
+          <button id="delete" class="btn btn-danger" ng-click="deleteCounter(counter._id)"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
         </div>
-      </li>
 
-      <h1 ng-if="results.length == 0">No results found...</h1>
+        <div class="count">
+          <button class="btn up" ng-click="counter.count = counter.count + 1; updateCount(counter._id, counter.count)"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></button>
+          <br>
+          <span>{{counter.count}}</span>
+          <br>
+          <button class="btn down" ng-click="counter.count = counter.count - 1; updateCount(counter._id, counter.count)"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></button>
+        </div>
+      </div>
+    </li>
 
-    </ul>
+    <h1 ng-if="results.length == 0">No results found...</h1>
+
+  </ul>
 </div>
 
 </div>

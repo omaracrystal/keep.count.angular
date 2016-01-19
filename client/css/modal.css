@@ -1,13 +1,4 @@
 /* MODAL */
-#new {
-  display: fixed;
-  font-size: 1em;
-  margin: 0 auto;
-  width: 200px;
-  height: 40px;
-  border-radius: 25px;
-  margin-top: 20px;
-}
 
 #modalSquare {
   width: 240px;
@@ -32,7 +23,7 @@
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
-  background-color: #1190A4;
+  background-color: #0da58e;
   box-shadow: 4px 4px 80px #000;
   border-radius: 50px;
 }
