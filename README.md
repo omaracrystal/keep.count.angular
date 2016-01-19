@@ -1,5 +1,6 @@
 # COUNTING APP
-* (This will be completed Dec 10th)
+
+[https://keeping-count-all-day.herokuapp.com/](https://keeping-count-all-day.herokuapp.com/) 
 
 ## Description:
 This app allows you to keep count of whatever your heart desires. You can add, edit, and delete counters. Total count is easily displayed and you can search your counters too! I had a lot of fun styling the user interface and giving the app a responsive layout to deliver interactive user experiences. 
