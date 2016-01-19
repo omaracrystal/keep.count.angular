@@ -27,6 +27,30 @@ div, ul, li{
   padding: 0;
   list-style-type: none;
 }
+footer {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0px;
+  text-align: center;
+  text-decoration: none;
+  z-index: 100;
+  background-color: #2C6872;
+  height: 40px;
+  letter-spacing: .1em;
+}
+a {
+  letter-spacing: .1em;
+  color: #000;
+}
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+a:hover {
+  color: #ffffff;
+}
 /* -- END DEFAULTS/ BASICS -- */
 
 /* ADD ON CLASSES */
