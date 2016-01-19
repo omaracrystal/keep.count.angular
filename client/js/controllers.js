@@ -1,5 +1,8 @@
 app.controller("counter-controller", ["$scope", "httpFactory", "$timeout", function($scope, httpFactory, $timeout){
 
+  var counterUrl = "";
+  var countersUrl = "/api/v1/counters"
+
   $scope.messageSection = false;
   $scope.edit = false;
   $scope.message = "";
@@ -16,9 +19,6 @@ app.controller("counter-controller", ["$scope", "httpFactory", "$timeout", funct
     $scope.counter = {};
   }
 
-  var counterUrl = "";
-  var countersUrl = "/api/v1/counters"
-
   getCounters = function(url){
     httpFactory.get(url)
     .then(function(response){
@@ -32,7 +32,7 @@ app.controller("counter-controller", ["$scope", "httpFactory", "$timeout", funct
     $scope.message = messageString;
     $timeout(function() {
       $scope.messageSection = false;
-    }, 5000);
+    }, 2000);
   }
 
   getCounters(countersUrl);

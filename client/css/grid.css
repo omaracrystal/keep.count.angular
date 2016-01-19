@@ -1,19 +1,9 @@
-/* -- DEFAULTS -- */
-
-div, ul, li{
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
 /* -- FLUID GRID STYLES -- */
-
 #Grid{
   margin-bottom: 40px;
   text-align: justify;
   font-size: 0.1px;
 }
-
 #Grid li{
   display: inline-flex;
   flex-direction: row;
@@ -24,23 +14,134 @@ div, ul, li{
   padding-top: 0%; /* Used instead of height to give elements fluid, width-based height */
   margin-bottom: 2.5%;
 }
-
 #Grid:after{
   content: '';
   display: inline-block;
   width: 100%;
   border-top: 1px solid #fff; /* Border added to make element visible for demonstration purposes */
 }
-
 #Grid .placeholder{
   padding: 0;
   border-top: 10px solid #922d8d; /* Border added to make element visible for demonstration purposes */
 }
+/* -- END FLUID GRID STYLES -- */
+
+
+/* COUNTERS UNIVERSE */
+.container {
+  padding-top: 135px;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.col-md-3 {
+  width: 250px;
+}
+
+/* COUNTER WORLD */
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.square {
+  width: 200px;
+  height: 200px;
+  border-radius: 15%;
+  -webkit-box-shadow: 3px 3px 2px #666666;
+  -moz-box-shadow: 3px 3px 2px #666666;
+  box-shadow: 3px 3px 2px #666666;
+}
+.count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 1px 3px #666666;
+  -moz-box-shadow: 0px 1px 3px #666666;
+  box-shadow: 0px 1px 3px #666666;
+}
+#input {
+  text-align: center;
+  border-radius: 25px;
+  width: 90%;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 0 auto;
+}
+/* END COUNTER WORLD */
+
+/* BUTTON WORLD */
+.btn {
+  border-width: 0px;
+  font-size: 15px;
+  border-radius: 50%;
+  padding: 4px 4px 4px 4px;
+  background: #ffffff;
+  background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -o-linear-gradient(top, #ffffff, #ffffff);
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+  -webkit-border-radius: 50;
+  -moz-border-radius: 50;
+  -webkit-box-shadow: 0px 1px 3px #666666;
+  -moz-box-shadow: 0px 1px 3px #666666;
+  box-shadow: 0px 1px 3px #666666;
+  font-family: Arial;
+  color: #000000;
+  text-decoration: none;
+}
+.btn:hover {
+  background: #1B6F87;
+  text-decoration: none;
+}
+/* END BUTTON WORLD */
+
+/* GLYPHICON WORLD */
+.glyphicon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  width: 25px;
+  height: 25px;
+}
+.glyphicon-trash {
+  padding-right: 1px;
+}
+.glyphicon-pencil {
+  padding-bottom: 2px;
+}
+.glyphicon-chevron-down, .glyphicon-chevron-up {
+  padding-left: 1px;
+}
+.glyphicon-chevron-down:hover, .glyphicon-chevron-up:hover {
+  color: white;
+}
+.glyphicon-chevron-up {
+  padding-bottom: 5px;
+}
+/* END GLYPHICON WORLD */
+
+/* END COUNTERS UNIVERSE */
+
 
 /* -- MEDIA QUERIES DEFINING RESPONSIVE LAYOUTS -- */
-
+.add-counter {
+  margin: 0 auto;
+  max-width: 500px;
+}
+.all-counters {
+  margin: 0 auto;
+  max-width: 800px;
+}
 /* 4 COL */
-
 @media (min-width: 1000px){
   #Grid li{
     width: 25%;
@@ -48,10 +149,7 @@ div, ul, li{
     margin-bottom: 3%;
   }
 }
-
-
 /* 3 COL */
-
 @media (max-width: 800px){
   #Grid li{
     width: 31%;
@@ -59,25 +157,34 @@ div, ul, li{
     margin-bottom: 3%;
   }
 }
-
 /* 2 COL */
-
 @media (max-width: 775px){
   #Grid li{
     width: 48%;
     padding-top: 0%;
     margin-bottom: 3%;
   }
+  #total {
+    font-size: 4em;
+  }
 }
-
 /* SINGLE COL */
-
 @media (max-width: 520px){
   #Grid li{
     width: 100%;
     padding-top: 0%;
     margin-bottom: 3%;
   }
+  #addNav {
+    margin-right: 20px;
+  }
+  #inputSearch {
+    width: 90%;
+  }
+  #total {
+    font-size: 3em;
+  }
 }
+/* -- END MEDIA QUERIES DEFINING RESPONSIVE LAYOUTS -- */
 
 
