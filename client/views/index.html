@@ -11,10 +11,14 @@
 
 <body>
 
+  <nav>
+    <h2>TOTAL COUNT</h2>
+  </nav>
+
 <div ng-controller="counter-controller">
+
 <div class="container">
-  <h2>TOTAL COUNT</h2>
-  <h1 id="total" ng-forEach="counter in counters">{{total()}}</h1>
+    <h1 id="total" ng-forEach="counter in counters">{{total()}}</h1>
 
 <div ng-show="messageSection">
   <p class="alert alert-info" role="alert">{{ message }}</p>
@@ -22,7 +26,7 @@
 
   <!--MODAL-->
   <modal-dialog show='modalShown' width='70%' height='70%'>
-    <h1 class="text-center" ng-hide="edit">Add a New Counter</h1>
+    <h2 class="text-center" ng-hide="edit">Add a New Counter</h2>
     <h1 class="text-center" ng-show="edit">Edit a Counter</h1>
 
     <div class="square" id="modalSquare">

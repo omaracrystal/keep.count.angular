@@ -1,7 +1,8 @@
 body {
-  padding: 30px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #78cf97;
+/*  padding: 30px;*/
+  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+/*  background-color: #78cf97;*/
+  background-image: url('../images/count.png');
 }
 
 a {
@@ -10,10 +11,34 @@ a {
 
 h1 {
   text-align: center;
+  color: #fff;
+  text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
 }
 
 h2 {
   text-align: center;
+  color: black;
+  text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+  color: white;
+  letter-spacing: 5px;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background-color: #1b6f87;
+  margin-top: 20px;
+  height: 60px;
+  padding-bottom: 5px;
+    margin-top: 0px;
+}
+
+.fix-search (max-width: 520px){
+  nav {
+    display: fixed;
+  }
 }
 
 .alert {
@@ -24,34 +49,18 @@ h2 {
   /* Center the dialog */
   top: 20px;
   left: 50%;
+  background-color: #1b6f87;
+  color: #ffffff;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
 }
 
-#total {
-  font-size: 6em;
-}
-
-#input {
-  text-align: center;
-  border-radius: 25px;
-  width: 90%;
-  margin: 0 auto;
-}
-
-#add {
-  margin-top: 20px;
-  border-radius: 25px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-#update {
-  margin-top: 20px;
-  border-radius: 25px;
-  padding-left: 20px;
-  padding-right: 20px;
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .btn {
@@ -76,7 +85,7 @@ h2 {
 }
 
 .btn:hover {
-  background: #78cf97;
+  background: #1190A4;
   text-decoration: none;
 }
 
@@ -139,13 +148,6 @@ h2 {
   text-align: center;
 }
 
-.header {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .count {
   display: flex;
   align-items: center;
@@ -174,3 +176,29 @@ h2 {
   padding: 10px 10px 10px 10px;
   text-decoration: none;
 }
+
+#total {
+  font-size: 6em;
+}
+
+#input {
+  text-align: center;
+  border-radius: 25px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#add {
+  margin-top: 20px;
+  border-radius: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#update {
+  margin-top: 20px;
+  border-radius: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
