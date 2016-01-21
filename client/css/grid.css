@@ -50,9 +50,13 @@
   width: 200px;
   height: 200px;
   border-radius: 15%;
-  -webkit-box-shadow: 3px 3px 2px #666666;
+/*  background: #f2b846;*/
+  background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
+      background-image: linear-gradient(top, #f4f1ee, #fff);
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
+/*  -webkit-box-shadow: 3px 3px 2px #666666;
   -moz-box-shadow: 3px 3px 2px #666666;
-  box-shadow: 3px 3px 2px #666666;
+  box-shadow: 3px 3px 2px #666666;*/
 }
 .count {
   display: flex;
@@ -62,9 +66,12 @@
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  -webkit-box-shadow: 0px 1px 3px #666666;
+  background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
+      background-image: linear-gradient(top, #f4f1ee, #fff);
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
+  /*-webkit-box-shadow: 0px 1px 3px #666666;
   -moz-box-shadow: 0px 1px 3px #666666;
-  box-shadow: 0px 1px 3px #666666;
+  box-shadow: 0px 1px 3px #666666;*/
 }
 #input {
   text-align: center;
@@ -82,7 +89,10 @@
   font-size: 15px;
   border-radius: 50%;
   padding: 4px 4px 4px 4px;
-  background: #ffffff;
+  background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
+      background-image: linear-gradient(top, #f4f1ee, #fff);
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
+  /*background: #ffffff;
   background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
   background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
   background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
@@ -92,13 +102,14 @@
   -moz-border-radius: 50;
   -webkit-box-shadow: 0px 1px 3px #666666;
   -moz-box-shadow: 0px 1px 3px #666666;
-  box-shadow: 0px 1px 3px #666666;
+  box-shadow: 0px 1px 3px #666666;*/
   font-family: Arial;
   color: #000000;
   text-decoration: none;
 }
 .btn:hover {
-  background: #1B6F87;
+  background: #ffffff;
+  color: #27b6dd;
   text-decoration: none;
 }
 /* END BUTTON WORLD */
@@ -115,6 +126,9 @@
 .glyphicon-trash {
   padding-right: 1px;
 }
+.glyphicon-trash:hover {
+  color: red;
+}
 .glyphicon-pencil {
   padding-bottom: 2px;
 }
@@ -122,7 +136,7 @@
   padding-left: 1px;
 }
 .glyphicon-chevron-down:hover, .glyphicon-chevron-up:hover {
-  color: white;
+  color: #0ad3b2;
 }
 .glyphicon-chevron-up {
   padding-bottom: 5px;
