@@ -1,6 +1,7 @@
 body {
   font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
-  background-image: url('../images/count2.png');
+  background: #739aa0;
+  /*background-image: url('../images/count2.png');*/
 }
 /* Buttons by Footer that control Background */
 .bg {
