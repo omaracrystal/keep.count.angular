@@ -1,9 +1,30 @@
 body {
   font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
-/*  background-color: #02ccaa;*/
   background-image: url('../images/count2.png');
-  background-attachment: fixed;
 }
+/* Buttons by Footer that control Background */
+.bg {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 1px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
+}
+.bg:hover {
+  border: 2px solid #353a3a;
+}
+.numbers {
+  margin-left: 30px;
+  background-image: url('../images/numbers.png');
+}
+.stripes {
+margin-right: 30px;
+background: -webkit-linear-gradient(45deg, #379690 25%, #3aa19b 25%, #3aa19b 50%, #379690 50%, #379690 75%, #3aa19b 75%, #3aa19b);
+background: -moz-linear-gradient(45deg, #379690 25%, #3aa19b 25%, #3aa19b 50%, #379690 50%, #379690 75%, #3aa19b 75%, #3aa19b);
+background: -o-linear-gradient(45deg, #379690 25%, #3aa19b 25%, #3aa19b 50%, #379690 50%, #379690 75%, #3aa19b 75%, #3aa19b);
+background: linear-gradient(45deg, #379690 25%, #3aa19b 25%, #3aa19b 50%, #379690 50%, #379690 75%, #3aa19b 75%, #3aa19b);
+  background-size:10px 10px;
+}
+/* End Buttons by Footer that control Background */
 
 /* -- DEFAULTS/ BASICS -- */
 a {

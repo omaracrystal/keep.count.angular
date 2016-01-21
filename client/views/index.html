@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="/css/modal.css">
 </head>
 
-<body>
+<body ng-style="myStyle">
 
   <div ng-controller="counter-controller">
 
@@ -112,8 +112,10 @@
   </div>
 
   <footer>
+    <input type="button" class="bg stripes" ng-click="myStyle.background='linear-gradient(45deg, #379690 25%, #3aa19b 25%, #3aa19b 50%, #379690 50%, #379690 75%, #3aa19b 75%, #3aa19b)';myStyle.backgroundSize='100px 100px'">
     <a target="_blank" href="https://github.com/omaracrystal/keep.count.angular">Source Code  | </a>
     <a target="_blank" href="https://www.linkedin.com/in/crystalomara">|  Developer</a>
+    <input type="button" class="bg numbers" ng-click="myStyle={'background-image': 'url(./images/count.png)'}; myStyle.backgroundAttachment='fixed'">
   </footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>

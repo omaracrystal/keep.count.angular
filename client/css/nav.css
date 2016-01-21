@@ -82,6 +82,7 @@ nav {
 }
 #addNav:hover {
   background-color: #11e0c4;
+  border: 2px solid #353a3a;
 }
 #plus {
   font-size: 28px;
